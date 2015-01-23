@@ -30,6 +30,7 @@
                     </collectionViewFlowLayout>
                     <connections>
                         <outlet property="dataSource" destination="EAk-EB-FyL" id="TxQ-M9-m5d"/>
+                        <outlet property="delegate" destination="EAk-EB-FyL" id="8GC-8S-nIP"/>
                     </connections>
                 </collectionView>
             </subviews>
