@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FWKGridCell : UICollectionViewCell
-
+@property (nonatomic, weak) UILabel *titleLabel;
 @end

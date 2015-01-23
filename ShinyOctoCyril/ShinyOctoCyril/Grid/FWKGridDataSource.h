@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface FWKGridDataSource : NSObject
+extern NSString *const kFWKGridCellIdentifier;
 
+@interface FWKGridDataSource : NSObject <UICollectionViewDataSource, UICollectionViewDelegate>
+@property (strong) NSArray *items;
 @end
