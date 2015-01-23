@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B042FF071A72CD3500312E6F /* FWKGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B042FF051A72CD3500312E6F /* FWKGridViewController.m */; };
+		B042FF081A72CD3500312E6F /* FWKGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B042FF061A72CD3500312E6F /* FWKGridViewController.xib */; };
 		B042FF0D1A72D5A700312E6F /* UIView+VBHierarchySupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B042FF0C1A72D5A700312E6F /* UIView+VBHierarchySupport.m */; };
 		B042FF101A72D5F500312E6F /* NSLayoutConstraint+VBSelfInstall.m in Sources */ = {isa = PBXBuildFile; fileRef = B042FF0F1A72D5F500312E6F /* NSLayoutConstraint+VBSelfInstall.m */; };
 		B0F0D1CE1A69694800C3FB6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F0D1CD1A69694800C3FB6A /* main.m */; };
@@ -29,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B042FF041A72CD3500312E6F /* FWKGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWKGridViewController.h; sourceTree = "<group>"; };
+		B042FF051A72CD3500312E6F /* FWKGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWKGridViewController.m; sourceTree = "<group>"; };
+		B042FF061A72CD3500312E6F /* FWKGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FWKGridViewController.xib; sourceTree = "<group>"; };
 		B042FF0B1A72D5A700312E6F /* UIView+VBHierarchySupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VBHierarchySupport.h"; sourceTree = "<group>"; };
 		B042FF0C1A72D5A700312E6F /* UIView+VBHierarchySupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VBHierarchySupport.m"; sourceTree = "<group>"; };
 		B042FF0E1A72D5F500312E6F /* NSLayoutConstraint+VBSelfInstall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+VBSelfInstall.h"; sourceTree = "<group>"; };
@@ -115,6 +120,9 @@
 				B0F0D1D81A69694800C3FB6A /* Images.xcassets */,
 				B0F0D1DA1A69694800C3FB6A /* LaunchScreen.xib */,
 				B0F0D1CB1A69694800C3FB6A /* Supporting Files */,
+				B042FF041A72CD3500312E6F /* FWKGridViewController.h */,
+				B042FF051A72CD3500312E6F /* FWKGridViewController.m */,
+				B042FF061A72CD3500312E6F /* FWKGridViewController.xib */,
 			);
 			path = ShinyOctoCyril;
 			sourceTree = "<group>";
@@ -228,6 +236,7 @@
 				B0F0D1D71A69694800C3FB6A /* Main.storyboard in Resources */,
 				B0F0D1DC1A69694800C3FB6A /* LaunchScreen.xib in Resources */,
 				B0F0D1D91A69694800C3FB6A /* Images.xcassets in Resources */,
+				B042FF081A72CD3500312E6F /* FWKGridViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +259,7 @@
 				B0F0D1D11A69694800C3FB6A /* AppDelegate.m in Sources */,
 				B042FF0D1A72D5A700312E6F /* UIView+VBHierarchySupport.m in Sources */,
 				B0F0D1CE1A69694800C3FB6A /* main.m in Sources */,
+				B042FF071A72CD3500312E6F /* FWKGridViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

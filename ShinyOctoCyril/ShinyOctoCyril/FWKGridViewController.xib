@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FWKGridViewController">
+            <connections>
+                <outlet property="collectionView" destination="Uhq-Bg-2xp" id="snN-Cg-iPn"/>
+                <outlet property="gridDataSource" destination="EAk-EB-FyL" id="3aX-H9-yVd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Uhq-Bg-2xp">
+                    <rect key="frame" x="0.0" y="390" width="210" height="210"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="210" id="44L-9T-pVJ"/>
+                        <constraint firstAttribute="height" constant="210" id="RG1-ig-S9O"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jUp-Ck-rV3">
+                        <size key="itemSize" width="100" height="100"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="EAk-EB-FyL" id="TxQ-M9-m5d"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Uhq-Bg-2xp" secondAttribute="bottom" id="CHH-Jd-UPS"/>
+                <constraint firstItem="Uhq-Bg-2xp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jsP-Cv-96p"/>
+                <constraint firstItem="Uhq-Bg-2xp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n25-wI-mEv"/>
+                <constraint firstAttribute="bottom" secondItem="Uhq-Bg-2xp" secondAttribute="bottom" id="wLd-5Z-QcW"/>
+            </constraints>
+        </view>
+        <customObject id="EAk-EB-FyL" customClass="FWKGridDataSource"/>
+    </objects>
+</document>
