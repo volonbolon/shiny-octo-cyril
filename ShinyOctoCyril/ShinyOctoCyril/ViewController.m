@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "FWKGridViewController.h"
 
 @interface ViewController ()
+- (IBAction)presentGridController:(id)sender;
 
 @end
 
@@ -24,4 +26,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)presentGridController:(id)sender
+{
+    
+    FWKGridViewController *gvc = [[FWKGridViewController alloc] initWithNibName:NSStringFromClass([FWKGridViewController class]) bundle:nil];
+    [self presentViewController:gvc animated:YES completion:NULL];
+    
+}
 @end
