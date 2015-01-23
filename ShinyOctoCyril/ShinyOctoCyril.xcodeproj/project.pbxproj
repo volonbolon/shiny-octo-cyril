@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B042FF0D1A72D5A700312E6F /* UIView+VBHierarchySupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B042FF0C1A72D5A700312E6F /* UIView+VBHierarchySupport.m */; };
+		B042FF101A72D5F500312E6F /* NSLayoutConstraint+VBSelfInstall.m in Sources */ = {isa = PBXBuildFile; fileRef = B042FF0F1A72D5F500312E6F /* NSLayoutConstraint+VBSelfInstall.m */; };
 		B0F0D1CE1A69694800C3FB6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F0D1CD1A69694800C3FB6A /* main.m */; };
 		B0F0D1D11A69694800C3FB6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F0D1D01A69694800C3FB6A /* AppDelegate.m */; };
 		B0F0D1D41A69694800C3FB6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F0D1D31A69694800C3FB6A /* ViewController.m */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B042FF0B1A72D5A700312E6F /* UIView+VBHierarchySupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VBHierarchySupport.h"; sourceTree = "<group>"; };
+		B042FF0C1A72D5A700312E6F /* UIView+VBHierarchySupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VBHierarchySupport.m"; sourceTree = "<group>"; };
+		B042FF0E1A72D5F500312E6F /* NSLayoutConstraint+VBSelfInstall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+VBSelfInstall.h"; sourceTree = "<group>"; };
+		B042FF0F1A72D5F500312E6F /* NSLayoutConstraint+VBSelfInstall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+VBSelfInstall.m"; sourceTree = "<group>"; };
 		B0F0D1C81A69694800C3FB6A /* ShinyOctoCyril.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinyOctoCyril.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F0D1CC1A69694800C3FB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0F0D1CD1A69694800C3FB6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +66,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B042FF091A72D55800312E6F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B042FF0A1A72D56400312E6F /* Categories */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		B042FF0A1A72D56400312E6F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B042FF0B1A72D5A700312E6F /* UIView+VBHierarchySupport.h */,
+				B042FF0C1A72D5A700312E6F /* UIView+VBHierarchySupport.m */,
+				B042FF0E1A72D5F500312E6F /* NSLayoutConstraint+VBSelfInstall.h */,
+				B042FF0F1A72D5F500312E6F /* NSLayoutConstraint+VBSelfInstall.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		B0F0D1BF1A69694800C3FB6A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,7 @@
 		B0F0D1CA1A69694800C3FB6A /* ShinyOctoCyril */ = {
 			isa = PBXGroup;
 			children = (
+				B042FF091A72D55800312E6F /* Utilities */,
 				B0F0D1CF1A69694800C3FB6A /* AppDelegate.h */,
 				B0F0D1D01A69694800C3FB6A /* AppDelegate.m */,
 				B0F0D1D21A69694800C3FB6A /* ViewController.h */,
@@ -220,7 +246,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0F0D1D41A69694800C3FB6A /* ViewController.m in Sources */,
+				B042FF101A72D5F500312E6F /* NSLayoutConstraint+VBSelfInstall.m in Sources */,
 				B0F0D1D11A69694800C3FB6A /* AppDelegate.m in Sources */,
+				B042FF0D1A72D5A700312E6F /* UIView+VBHierarchySupport.m in Sources */,
 				B0F0D1CE1A69694800C3FB6A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +442,7 @@
 				B0F0D1ED1A69694800C3FB6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0F0D1EE1A69694800C3FB6A /* Build configuration list for PBXNativeTarget "ShinyOctoCyrilTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +451,7 @@
 				B0F0D1F01A69694800C3FB6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
