@@ -60,14 +60,14 @@
 - (BOOL)gridViewController:(FWKGridViewController *)gridViewController shouldSelectViewController:(UIViewController *)viewController
 {
     
-    return NO;
+    return YES;
     
 }
 
 - (void)gridViewController:(FWKGridViewController *)gridViewController didSelectViewController:(UIViewController *)viewController
 {
     
-    
+    NSLog(@"%@", viewController);
     
 }
 @end
