@@ -44,6 +44,7 @@
 		B042FF131A72E6C400312E6F /* FWKGridDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FWKGridDataSource.m; path = Grid/FWKGridDataSource.m; sourceTree = "<group>"; };
 		B042FF151A72E7E800312E6F /* FWKGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWKGridCell.h; path = Grid/FWKGridCell.h; sourceTree = "<group>"; };
 		B042FF161A72E7E800312E6F /* FWKGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FWKGridCell.m; path = Grid/FWKGridCell.m; sourceTree = "<group>"; };
+		B074537F1A7527940097091D /* FWKControllerForGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWKControllerForGrid.h; path = Grid/FWKControllerForGrid.h; sourceTree = "<group>"; };
 		B0F0D1C81A69694800C3FB6A /* ShinyOctoCyril.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinyOctoCyril.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F0D1CC1A69694800C3FB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0F0D1CD1A69694800C3FB6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 				B042FF131A72E6C400312E6F /* FWKGridDataSource.m */,
 				B042FF151A72E7E800312E6F /* FWKGridCell.h */,
 				B042FF161A72E7E800312E6F /* FWKGridCell.m */,
+				B074537F1A7527940097091D /* FWKControllerForGrid.h */,
 			);
 			name = Grid;
 			sourceTree = "<group>";
