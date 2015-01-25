@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIView *masterContainer;
 @property (weak, nonatomic) IBOutlet UIView *detailContainer;
+@property (strong) UIViewController *currentMasterViewController;
+@property (strong) UIViewController *currentDetailViewController;
 
 - (void)loadMasterAtIndexPath:(NSIndexPath *)indexPath;
 @end
@@ -56,10 +58,19 @@
 - (void)showDetailViewController:(UIViewController *)detailVC
 {
     
-    [self addChildViewController:detailVC];
-    [[self detailContainer] addSubview:[detailVC view]];
-    [[detailVC view] setFrame:[[self detailContainer] bounds]];
-    [detailVC didMoveToParentViewController:self];
+    if ( ![[self currentDetailViewController] isEqual:detailVC] ) {
+        
+        [self addChildViewController:detailVC];
+        [[self currentDetailViewController] willMoveToParentViewController:nil];
+        [[self detailContainer] addSubview:[detailVC view]];
+        CGRect detailContainerBounds = [[self detailContainer] bounds];
+        [[detailVC view] setFrame:detailContainerBounds];
+        [detailVC didMoveToParentViewController:self];
+        [[[self currentDetailViewController] view] removeFromSuperview];
+        [[self currentDetailViewController] removeFromParentViewController];
+        [self setCurrentDetailViewController:detailVC];
+        
+    }
     
 }
 
@@ -94,11 +105,19 @@
     
     UIViewController *masterVC = [[self viewControllers] objectAtIndex:[indexPath row]];
     
-    [self addChildViewController:masterVC];
-    [[self masterContainer] addSubview:[masterVC view]];
-    [[masterVC view] setFrame:[[self masterContainer] bounds]];
-    [masterVC didMoveToParentViewController:self];
-    
+    if ( ![masterVC isEqual:[self currentMasterViewController]] ) {
+        
+        [self addChildViewController:masterVC];
+        [[self currentMasterViewController] willMoveToParentViewController:nil];
+        [[self masterContainer] addSubview:[masterVC view]];
+        [[masterVC view] setFrame:[[self masterContainer] bounds]];
+        [masterVC didMoveToParentViewController:self];
+        [[[self currentMasterViewController] view] removeFromSuperview];
+        [[self currentMasterViewController] removeFromParentViewController];
+        [self setCurrentMasterViewController:masterVC];
+        
+    }
+
 }
 
 @end

@@ -59,8 +59,10 @@ static NSString *const kOneMasterCellIdentifier = @"oneMasterCellIdentifier";
     
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
+    
+    [super viewDidAppear:animated];
     
     NSIndexPath *selectedIndexPath = [[self tableView] indexPathForSelectedRow];
     if ( selectedIndexPath ) {
@@ -109,6 +111,7 @@ static NSString *const kOneMasterCellIdentifier = @"oneMasterCellIdentifier";
     [[cell textLabel] setText:[item name]];
     
     return cell;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
