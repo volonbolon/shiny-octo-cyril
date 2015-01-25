@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol FWKControllerForGrid <NSObject>
-@required
-- (UIViewController *)masterController;
-- (UIViewController *)currentDetailViewController;
-@end
-
 @interface FWKGridViewController : UIViewController
 - (void)setViewControllers:(NSArray *)viewControllers;
 - (void)showDetailViewController:(UIViewController *)vc sender:(id)sender;
