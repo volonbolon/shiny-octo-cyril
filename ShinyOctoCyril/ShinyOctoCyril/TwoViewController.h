@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FWKControllerForGrid.h"
 
-@interface TwoViewController : UIViewController
+@interface TwoViewController : UIViewController <FWKControllerForGrid>
 
 @end

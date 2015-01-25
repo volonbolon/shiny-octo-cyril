@@ -9,6 +9,7 @@
 #import "FWKGridViewController.h"
 #import "FWKGridDataSource.h"
 #import "FWKGridCell.h"
+#import "NSLayoutConstraint+VBSelfInstall.h"
 
 @interface FWKGridViewController () <UICollectionViewDelegate>
 @property (strong, nonatomic) IBOutlet FWKGridDataSource *gridDataSource;
@@ -63,8 +64,8 @@
         [self addChildViewController:detailVC];
         [[self currentDetailViewController] willMoveToParentViewController:nil];
         [[self detailContainer] addSubview:[detailVC view]];
-        CGRect detailContainerBounds = [[self detailContainer] bounds];
-        [[detailVC view] setFrame:detailContainerBounds];
+        [[detailVC view] setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self adjustConstraints:[detailVC view] containerView:[self detailContainer]];
         [detailVC didMoveToParentViewController:self];
         [[[self currentDetailViewController] view] removeFromSuperview];
         [[self currentDetailViewController] removeFromParentViewController];
@@ -81,16 +82,6 @@
     // Dispose of any resources that can be recreated.
 
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -110,7 +101,8 @@
         [self addChildViewController:masterVC];
         [[self currentMasterViewController] willMoveToParentViewController:nil];
         [[self masterContainer] addSubview:[masterVC view]];
-        [[masterVC view] setFrame:[[self masterContainer] bounds]];
+        [[masterVC view] setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self adjustConstraints:[masterVC view] containerView:[self masterContainer]];
         [masterVC didMoveToParentViewController:self];
         [[[self currentMasterViewController] view] removeFromSuperview];
         [[self currentMasterViewController] removeFromParentViewController];
@@ -118,6 +110,23 @@
         
     }
 
+}
+
+- (void)adjustConstraints:(UIView *)view containerView:(UIView *)containerView
+{
+    
+    NSLayoutConstraint *tpc = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:containerView attribute:NSLayoutAttributeTop multiplier:1.0f constant:0.0f];
+    [tpc vb_install];
+    
+    NSLayoutConstraint *lc = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:containerView attribute:NSLayoutAttributeLeading multiplier:1.0f constant:0.0f];
+    [lc vb_install];
+    
+    NSLayoutConstraint *wc = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:containerView attribute:NSLayoutAttributeWidth multiplier:1.0f constant:0.0f];
+    [wc vb_install];
+    
+    NSLayoutConstraint *hc = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:containerView attribute:NSLayoutAttributeHeight multiplier:1.0f constant:0.0f];
+    [hc vb_install];
+    
 }
 
 @end

@@ -60,10 +60,10 @@ static NSString *const kOneMasterCellIdentifier = @"oneMasterCellIdentifier";
     
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    
-    [super viewDidAppear:animated];
+
+    [super viewWillAppear:animated];
     
     NSIndexPath *selectedIndexPath = [[self tableView] indexPathForSelectedRow];
     if ( selectedIndexPath ) {

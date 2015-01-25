@@ -7,31 +7,38 @@
 //
 
 #import "TwoViewController.h"
+#import "DetailViewController.h"
+#import "FWKGridViewController.h"
+#import "UIViewController+GridController.h"
 
 @interface TwoViewController ()
-
+@property (strong) UIViewController *selectedViewController;
 @end
 
 @implementation TwoViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    [super viewWillAppear:animated];
+    
+    DetailViewController *odvc = [[DetailViewController alloc] initWithNibName:NSStringFromClass([DetailViewController class]) bundle:nil];
+    [odvc setTitle:@"Orange"];
+    [[odvc view] setBackgroundColor:[UIColor orangeColor]];
+    
+    FWKGridViewController *gvc = [self gridViewController];
+    
+    [gvc showDetailViewController:odvc];
+    
+    [self setSelectedViewController:odvc];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - FWKControllerForGrid
+- (UIViewController *)currentDetailViewController
+{
+    
+    return [self selectedViewController];
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
