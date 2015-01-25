@@ -11,12 +11,17 @@
 
 NSString *const kFWKGridCellIdentifier = @"kGridCellIdentifier";
 
+@interface FWKGridDataSource ()
+
+@end
+
 @implementation FWKGridDataSource
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     
-    return [[self items] count];
+    NSInteger numberOfItemsInSection = [[self items] count];
+    return numberOfItemsInSection;
     
 }
 
@@ -24,8 +29,12 @@ NSString *const kFWKGridCellIdentifier = @"kGridCellIdentifier";
 {
     
     FWKGridCell *cell = (FWKGridCell*)[collectionView dequeueReusableCellWithReuseIdentifier:kFWKGridCellIdentifier forIndexPath:indexPath];
-    NSString *i = [[self items] objectAtIndex:[indexPath row]];
-    [[cell titleLabel] setText:i];
+    
+    UIViewController *vc = [[self items] objectAtIndex:[indexPath row]];
+    UITabBarItem *tbi = [vc tabBarItem];
+    NSString *title = [tbi title];
+    
+    [[cell titleLabel] setText:title];
     return cell;
     
 }

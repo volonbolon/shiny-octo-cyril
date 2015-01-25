@@ -24,17 +24,11 @@
 
     [super viewDidLoad];
     
-    NSArray *items = @[@"one",@"two",@"three",@"four"];
-    [[self gridDataSource] setItems:items];
+    NSArray *vvcc = [self viewControllers];
+    [[self gridDataSource] setItems:vvcc];
+    
     [[self collectionView] registerClass:[FWKGridCell class] forCellWithReuseIdentifier:kFWKGridCellIdentifier];
 
-}
-
-- (void)setViewControllers:(NSArray *)viewControllers
-{
-    
-    
-    
 }
 
 - (void)showDetailViewController:(UIViewController *)vc sender:(id)sender

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FWKGridViewController : UIViewController
-- (void)setViewControllers:(NSArray *)viewControllers;
+@property (strong) NSArray *viewControllers;
 - (void)showDetailViewController:(UIViewController *)vc sender:(id)sender;
 @end
