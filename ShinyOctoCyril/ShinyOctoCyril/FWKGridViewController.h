@@ -10,5 +10,7 @@
 
 @interface FWKGridViewController : UIViewController
 @property (strong) NSArray *viewControllers;
-- (void)showDetailViewController:(UIViewController *)vc sender:(id)sender;
+
+- (void)showDetailViewController:(UIViewController *)vc;
+
 @end

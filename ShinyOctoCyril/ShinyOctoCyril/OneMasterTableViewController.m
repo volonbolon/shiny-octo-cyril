@@ -7,6 +7,9 @@
 //
 
 #import "OneMasterTableViewController.h"
+#import "UIViewController+GridController.h"
+#import "FWKGridViewController.h"
+#import "OneDetailViewController.h"
 
 static NSString *const kOneMasterCellIdentifier = @"oneMasterCellIdentifier";
 
@@ -48,9 +51,30 @@ static NSString *const kOneMasterCellIdentifier = @"oneMasterCellIdentifier";
     Item *purple = [[Item alloc] initWithName:@"Purple" color:[UIColor purpleColor]];
     Item *green = [[Item alloc] initWithName:@"Green" color:[UIColor greenColor]];
     
-    [[self tableView] registerClass:[UITableView class] forCellReuseIdentifier:kOneMasterCellIdentifier];
+    [[self tableView] registerClass:[UITableViewCell class] forCellReuseIdentifier:kOneMasterCellIdentifier];
+    
+    [[self tableView] setTableFooterView:[UIView new]];
     
     [self setItems:@[red,blue,purple,green]];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    NSIndexPath *selectedIndexPath = [[self tableView] indexPathForSelectedRow];
+    if ( selectedIndexPath ) {
+        
+        [self loadDetailViewControllerAtIndexPath:selectedIndexPath];
+        
+    } else {
+        
+        selectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [[self tableView] selectRowAtIndexPath:selectedIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+        
+        [self loadDetailViewControllerAtIndexPath:selectedIndexPath];
+        
+    }
     
 }
 
@@ -87,46 +111,33 @@ static NSString *const kOneMasterCellIdentifier = @"oneMasterCellIdentifier";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    [self loadDetailViewControllerAtIndexPath:indexPath];
+    
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - FWKControllerForGrid
 - (UIViewController *)currentDetailViewController
 {
 
     return nil;
+    
+}
+
+- (void)loadDetailViewControllerAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    Item *i = [[self items] objectAtIndex:[indexPath row]];
+    
+    OneDetailViewController *odvc = [[OneDetailViewController alloc] initWithNibName:NSStringFromClass([OneDetailViewController class]) bundle:nil];
+    [odvc setTitle:[i name]];
+    [[odvc view] setBackgroundColor:[i color]];
+    
+    FWKGridViewController *gvc = [self gridViewController];
+    
+    [gvc showDetailViewController:odvc];
     
 }
 
