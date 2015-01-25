@@ -12,5 +12,9 @@
 extern NSString *const kFWKGridCellIdentifier;
 
 @interface FWKGridDataSource : NSObject <UICollectionViewDataSource, UICollectionViewDelegate>
+/**
+ *  Array of UIControllers. We extract the UITabBarItem, and with that, we build 
+ *  the cell content
+ */
 @property (strong) NSArray *items;
 @end
