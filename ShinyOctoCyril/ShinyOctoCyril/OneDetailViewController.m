@@ -9,6 +9,7 @@
 #import "OneDetailViewController.h"
 
 @interface OneDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
@@ -16,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *t = [self title];
+    [[self label] setText:t];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
