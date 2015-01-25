@@ -10,11 +10,13 @@
 #import "FWKGridDataSource.h"
 #import "FWKGridCell.h"
 
-@interface FWKGridViewController ()
+@interface FWKGridViewController () <UICollectionViewDelegate>
 @property (strong, nonatomic) IBOutlet FWKGridDataSource *gridDataSource;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIView *masterContainer;
+@property (weak, nonatomic) IBOutlet UIView *detailContainer;
 
+- (void)loadMasterAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
 @implementation FWKGridViewController
@@ -24,6 +26,8 @@
 
     [super viewDidLoad];
     
+    [self topLayoutGuide];
+    
     NSArray *vvcc = [self viewControllers];
     [[self gridDataSource] setItems:vvcc];
     
@@ -31,16 +35,40 @@
 
 }
 
-- (void)showDetailViewController:(UIViewController *)vc sender:(id)sender
+- (void)viewWillAppear:(BOOL)animated
 {
     
+    [super viewWillAppear:animated];
     
+    NSIndexPath *selectedItemIndexPath = [[[self collectionView] indexPathsForSelectedItems] firstObject];
+    
+    if ( !selectedItemIndexPath && [[self viewControllers] count]>0 ) {
+        
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [[self collectionView] selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+        
+        [self loadMasterAtIndexPath:indexPath];
+        
+    }
     
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)showDetailViewController:(UIViewController *)detailVC
+{
+    
+    [self addChildViewController:detailVC];
+    [[self detailContainer] addSubview:[detailVC view]];
+    [[detailVC view] setFrame:[[self detailContainer] bounds]];
+    [detailVC didMoveToParentViewController:self];
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+
 }
 
 /*
@@ -52,5 +80,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [self loadMasterAtIndexPath:indexPath];
+    
+}
+
+- (void)loadMasterAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UIViewController *masterVC = [[self viewControllers] objectAtIndex:[indexPath row]];
+    
+    [self addChildViewController:masterVC];
+    [[self masterContainer] addSubview:[masterVC view]];
+    [[masterVC view] setFrame:[[self masterContainer] bounds]];
+    [masterVC didMoveToParentViewController:self];
+    
+}
 
 @end

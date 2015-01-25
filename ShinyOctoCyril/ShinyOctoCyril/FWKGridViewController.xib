@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FWKGridViewController">
             <connections>
                 <outlet property="collectionView" destination="Uhq-Bg-2xp" id="snN-Cg-iPn"/>
+                <outlet property="detailContainer" destination="sg5-8L-8oS" id="xR3-Cg-HrT"/>
                 <outlet property="gridDataSource" destination="EAk-EB-FyL" id="3aX-H9-yVd"/>
                 <outlet property="masterContainer" destination="MUH-fY-f8W" id="TfG-0W-9z3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,8 +21,8 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Uhq-Bg-2xp">
                     <rect key="frame" x="0.0" y="390" width="210" height="210"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="210" id="44L-9T-pVJ"/>
-                        <constraint firstAttribute="height" constant="210" id="RG1-ig-S9O"/>
+                        <constraint firstAttribute="width" constant="210" id="E34-ej-BO6"/>
+                        <constraint firstAttribute="height" constant="210" id="mZB-Jx-1h5"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jUp-Ck-rV3">
                         <size key="itemSize" width="100" height="100"/>
@@ -35,20 +36,26 @@
                     </connections>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUH-fY-f8W">
-                    <rect key="frame" x="0.0" y="0.0" width="210" height="390"/>
+                    <rect key="frame" x="0.0" y="20" width="210" height="370"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sg5-8L-8oS">
+                    <rect key="frame" x="210" y="20" width="390" height="580"/>
+                    <color key="backgroundColor" red="0.91372555489999996" green="0.44313728810000003" blue="0.32941177490000001" alpha="1" colorSpace="deviceRGB"/>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="MUH-fY-f8W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9HG-Z3-Mxd"/>
-                <constraint firstAttribute="bottom" secondItem="Uhq-Bg-2xp" secondAttribute="bottom" id="CHH-Jd-UPS"/>
-                <constraint firstItem="Uhq-Bg-2xp" firstAttribute="width" secondItem="MUH-fY-f8W" secondAttribute="width" id="OWF-Z8-k4w"/>
-                <constraint firstItem="Uhq-Bg-2xp" firstAttribute="top" secondItem="MUH-fY-f8W" secondAttribute="bottom" id="aRA-g2-z2k"/>
-                <constraint firstItem="Uhq-Bg-2xp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jsP-Cv-96p"/>
-                <constraint firstItem="Uhq-Bg-2xp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n25-wI-mEv"/>
-                <constraint firstAttribute="bottom" secondItem="Uhq-Bg-2xp" secondAttribute="bottom" id="wLd-5Z-QcW"/>
-                <constraint firstItem="MUH-fY-f8W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yCv-t3-W8N"/>
+                <constraint firstItem="sg5-8L-8oS" firstAttribute="leading" secondItem="MUH-fY-f8W" secondAttribute="trailing" id="7qh-5G-kgn"/>
+                <constraint firstItem="Uhq-Bg-2xp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AzN-e1-XLF"/>
+                <constraint firstItem="MUH-fY-f8W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="J8G-zq-bGd"/>
+                <constraint firstAttribute="trailing" secondItem="sg5-8L-8oS" secondAttribute="trailing" id="JZC-Qz-WKR"/>
+                <constraint firstItem="MUH-fY-f8W" firstAttribute="top" secondItem="sg5-8L-8oS" secondAttribute="top" id="Wis-Kf-bhk"/>
+                <constraint firstItem="Uhq-Bg-2xp" firstAttribute="width" secondItem="MUH-fY-f8W" secondAttribute="width" id="Yvy-Xz-XzC"/>
+                <constraint firstAttribute="bottom" secondItem="sg5-8L-8oS" secondAttribute="bottom" id="bwd-JQ-Qej"/>
+                <constraint firstItem="Uhq-Bg-2xp" firstAttribute="top" secondItem="MUH-fY-f8W" secondAttribute="bottom" id="ky8-50-NuA"/>
+                <constraint firstAttribute="bottom" secondItem="Uhq-Bg-2xp" secondAttribute="bottom" id="ra0-nd-1Zd"/>
+                <constraint firstItem="MUH-fY-f8W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="vJs-5s-zkG"/>
             </constraints>
         </view>
         <customObject id="EAk-EB-FyL" customClass="FWKGridDataSource"/>
