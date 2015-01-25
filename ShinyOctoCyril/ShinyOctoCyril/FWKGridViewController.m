@@ -12,8 +12,8 @@
 
 @interface FWKGridViewController ()
 @property (strong, nonatomic) IBOutlet FWKGridDataSource *gridDataSource;
-
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIView *masterContainer;
 
 @end
 

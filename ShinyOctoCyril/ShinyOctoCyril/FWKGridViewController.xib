@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="collectionView" destination="Uhq-Bg-2xp" id="snN-Cg-iPn"/>
                 <outlet property="gridDataSource" destination="EAk-EB-FyL" id="3aX-H9-yVd"/>
+                <outlet property="masterContainer" destination="MUH-fY-f8W" id="TfG-0W-9z3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,13 +34,21 @@
                         <outlet property="delegate" destination="EAk-EB-FyL" id="8GC-8S-nIP"/>
                     </connections>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUH-fY-f8W">
+                    <rect key="frame" x="0.0" y="0.0" width="210" height="390"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
+                <constraint firstItem="MUH-fY-f8W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9HG-Z3-Mxd"/>
                 <constraint firstAttribute="bottom" secondItem="Uhq-Bg-2xp" secondAttribute="bottom" id="CHH-Jd-UPS"/>
+                <constraint firstItem="Uhq-Bg-2xp" firstAttribute="width" secondItem="MUH-fY-f8W" secondAttribute="width" id="OWF-Z8-k4w"/>
+                <constraint firstItem="Uhq-Bg-2xp" firstAttribute="top" secondItem="MUH-fY-f8W" secondAttribute="bottom" id="aRA-g2-z2k"/>
                 <constraint firstItem="Uhq-Bg-2xp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jsP-Cv-96p"/>
                 <constraint firstItem="Uhq-Bg-2xp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n25-wI-mEv"/>
                 <constraint firstAttribute="bottom" secondItem="Uhq-Bg-2xp" secondAttribute="bottom" id="wLd-5Z-QcW"/>
+                <constraint firstItem="MUH-fY-f8W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yCv-t3-W8N"/>
             </constraints>
         </view>
         <customObject id="EAk-EB-FyL" customClass="FWKGridDataSource"/>
