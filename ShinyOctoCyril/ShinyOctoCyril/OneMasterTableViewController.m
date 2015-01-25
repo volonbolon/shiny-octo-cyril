@@ -38,6 +38,7 @@ static NSString *const kOneMasterCellIdentifier = @"oneMasterCellIdentifier";
 
 @interface OneMasterTableViewController ()
 @property (nonatomic, strong) NSArray *items;
+@property (strong) UIViewController *selectedViewController;
 @end
 
 @implementation OneMasterTableViewController
@@ -125,7 +126,7 @@ static NSString *const kOneMasterCellIdentifier = @"oneMasterCellIdentifier";
 - (UIViewController *)currentDetailViewController
 {
 
-    return nil;
+    return [self selectedViewController];
     
 }
 
@@ -141,6 +142,8 @@ static NSString *const kOneMasterCellIdentifier = @"oneMasterCellIdentifier";
     FWKGridViewController *gvc = [self gridViewController];
     
     [gvc showDetailViewController:odvc];
+    
+    [self setSelectedViewController:odvc];
     
 }
 
