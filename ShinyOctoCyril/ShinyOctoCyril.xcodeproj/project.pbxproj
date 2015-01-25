@@ -16,6 +16,7 @@
 		B074537A1A7524560097091D /* OneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07453781A7524560097091D /* OneDetailViewController.m */; };
 		B074537B1A7524560097091D /* OneDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B07453791A7524560097091D /* OneDetailViewController.xib */; };
 		B074537E1A7524C10097091D /* OneMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B074537D1A7524C10097091D /* OneMasterTableViewController.m */; };
+		B07453821A75671A0097091D /* UIViewController+GridController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07453811A75671A0097091D /* UIViewController+GridController.m */; };
 		B0F0D1CE1A69694800C3FB6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F0D1CD1A69694800C3FB6A /* main.m */; };
 		B0F0D1D11A69694800C3FB6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F0D1D01A69694800C3FB6A /* AppDelegate.m */; };
 		B0F0D1D41A69694800C3FB6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F0D1D31A69694800C3FB6A /* ViewController.m */; };
@@ -53,6 +54,8 @@
 		B074537C1A7524C10097091D /* OneMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneMasterTableViewController.h; sourceTree = "<group>"; };
 		B074537D1A7524C10097091D /* OneMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneMasterTableViewController.m; sourceTree = "<group>"; };
 		B074537F1A7527940097091D /* FWKControllerForGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWKControllerForGrid.h; path = Grid/FWKControllerForGrid.h; sourceTree = "<group>"; };
+		B07453801A75671A0097091D /* UIViewController+GridController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GridController.h"; sourceTree = "<group>"; };
+		B07453811A75671A0097091D /* UIViewController+GridController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GridController.m"; sourceTree = "<group>"; };
 		B0F0D1C81A69694800C3FB6A /* ShinyOctoCyril.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinyOctoCyril.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F0D1CC1A69694800C3FB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0F0D1CD1A69694800C3FB6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				B07453791A7524560097091D /* OneDetailViewController.xib */,
 				B074537C1A7524C10097091D /* OneMasterTableViewController.h */,
 				B074537D1A7524C10097091D /* OneMasterTableViewController.m */,
+				B07453801A75671A0097091D /* UIViewController+GridController.h */,
+				B07453811A75671A0097091D /* UIViewController+GridController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 				B042FF171A72E7E800312E6F /* FWKGridCell.m in Sources */,
 				B074537A1A7524560097091D /* OneDetailViewController.m in Sources */,
 				B042FF141A72E6C400312E6F /* FWKGridDataSource.m in Sources */,
+				B07453821A75671A0097091D /* UIViewController+GridController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
