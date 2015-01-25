@@ -32,7 +32,7 @@
                     </collectionViewFlowLayout>
                     <connections>
                         <outlet property="dataSource" destination="EAk-EB-FyL" id="TxQ-M9-m5d"/>
-                        <outlet property="delegate" destination="EAk-EB-FyL" id="8GC-8S-nIP"/>
+                        <outlet property="delegate" destination="-1" id="YtN-Lx-WwR"/>
                     </connections>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUH-fY-f8W">
