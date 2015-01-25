@@ -96,7 +96,14 @@
     
     UIViewController *masterVC = [[self viewControllers] objectAtIndex:[indexPath row]];
     
-    if ( ![masterVC isEqual:[self currentMasterViewController]] ) {
+    BOOL shouldSelectViewController = YES;
+    if ( [[self delegate] respondsToSelector:@selector(gridViewController:shouldSelectViewController:)] ) {
+        
+        shouldSelectViewController = [[self delegate] gridViewController:self shouldSelectViewController:masterVC];
+        
+    }
+    
+    if ( ![masterVC isEqual:[self currentMasterViewController]] && shouldSelectViewController ) {
         
         [self addChildViewController:masterVC];
         [[self currentMasterViewController] willMoveToParentViewController:nil];
@@ -107,6 +114,12 @@
         [[[self currentMasterViewController] view] removeFromSuperview];
         [[self currentMasterViewController] removeFromParentViewController];
         [self setCurrentMasterViewController:masterVC];
+        
+        if ( [[self delegate] respondsToSelector:@selector(gridViewController:didSelectViewController:)] ) {
+            
+            [[self delegate] gridViewController:self didSelectViewController:masterVC];
+            
+        }
         
     }
 
@@ -126,6 +139,13 @@
     
     NSLayoutConstraint *hc = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:containerView attribute:NSLayoutAttributeHeight multiplier:1.0f constant:0.0f];
     [hc vb_install];
+    
+}
+
+- (UIViewController *)selectedViewController
+{
+    
+    return [self currentMasterViewController];
     
 }
 

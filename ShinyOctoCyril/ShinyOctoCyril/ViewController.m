@@ -12,7 +12,9 @@
 #import "OneMasterTableViewController.h"
 #import "TwoViewController.h"
 
-@interface ViewController ()
+#import "FWKGridViewControllerDelegate.h"
+
+@interface ViewController () <FWKGridViewControllerDelegate>
 - (IBAction)presentGridController:(id)sender;
 
 @end
@@ -46,9 +48,26 @@
     
     FWKGridViewController *gvc = [[FWKGridViewController alloc] initWithNibName:NSStringFromClass([FWKGridViewController class]) bundle:nil];
     
+    [gvc setDelegate:self];
+    
     [gvc setViewControllers:@[omtvc, tvc]];
     
     [self presentViewController:gvc animated:YES completion:NULL];
+    
+}
+
+#pragma mark - FWKGridViewControllerDelegate
+- (BOOL)gridViewController:(FWKGridViewController *)gridViewController shouldSelectViewController:(UIViewController *)viewController
+{
+    
+    return NO;
+    
+}
+
+- (void)gridViewController:(FWKGridViewController *)gridViewController didSelectViewController:(UIViewController *)viewController
+{
+    
+    
     
 }
 @end

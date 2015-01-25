@@ -61,6 +61,7 @@
 		B0E7208A1A7587BF00C28743 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
 		B0E7208B1A7587BF00C28743 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 		B0E7208C1A7587BF00C28743 /* TwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoViewController.xib; sourceTree = "<group>"; };
+		B0E7208F1A7595F200C28743 /* FWKGridViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWKGridViewControllerDelegate.h; sourceTree = "<group>"; };
 		B0F0D1C81A69694800C3FB6A /* ShinyOctoCyril.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinyOctoCyril.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F0D1CC1A69694800C3FB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0F0D1CD1A69694800C3FB6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 				B042FF151A72E7E800312E6F /* FWKGridCell.h */,
 				B042FF161A72E7E800312E6F /* FWKGridCell.m */,
 				B074537F1A7527940097091D /* FWKControllerForGrid.h */,
+				B0E7208F1A7595F200C28743 /* FWKGridViewControllerDelegate.h */,
 			);
 			name = Grid;
 			sourceTree = "<group>";

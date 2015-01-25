@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FWKGridViewControllerDelegate.h"
 
 @interface FWKGridViewController : UIViewController
 @property (strong) NSArray *viewControllers;
+@property (weak) NSObject <FWKGridViewControllerDelegate> *delegate;
 
 - (void)showDetailViewController:(UIViewController *)vc;
-
+- (UIViewController *)selectedViewController;
 @end
