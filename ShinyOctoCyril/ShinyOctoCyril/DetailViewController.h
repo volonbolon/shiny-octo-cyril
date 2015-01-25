@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OneDetailViewController : UIViewController
+@interface DetailViewController : UIViewController
 @end

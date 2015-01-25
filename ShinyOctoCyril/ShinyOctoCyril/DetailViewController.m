@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Ariel Rodriguez. All rights reserved.
 //
 
-#import "OneDetailViewController.h"
+#import "DetailViewController.h"
 
-@interface OneDetailViewController ()
+@interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
-@implementation OneDetailViewController
+@implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -9,7 +9,7 @@
 #import "OneMasterTableViewController.h"
 #import "UIViewController+GridController.h"
 #import "FWKGridViewController.h"
-#import "OneDetailViewController.h"
+#import "DetailViewController.h"
 
 static NSString *const kOneMasterCellIdentifier = @"oneMasterCellIdentifier";
 
@@ -135,7 +135,7 @@ static NSString *const kOneMasterCellIdentifier = @"oneMasterCellIdentifier";
     
     Item *i = [[self items] objectAtIndex:[indexPath row]];
     
-    OneDetailViewController *odvc = [[OneDetailViewController alloc] initWithNibName:NSStringFromClass([OneDetailViewController class]) bundle:nil];
+    DetailViewController *odvc = [[DetailViewController alloc] initWithNibName:NSStringFromClass([DetailViewController class]) bundle:nil];
     [odvc setTitle:[i name]];
     [[odvc view] setBackgroundColor:[i color]];
     
