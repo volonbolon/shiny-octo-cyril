@@ -17,6 +17,8 @@
 		B074537B1A7524560097091D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B07453791A7524560097091D /* DetailViewController.xib */; };
 		B074537E1A7524C10097091D /* OneMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B074537D1A7524C10097091D /* OneMasterTableViewController.m */; };
 		B07453821A75671A0097091D /* UIViewController+GridController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07453811A75671A0097091D /* UIViewController+GridController.m */; };
+		B0E7208D1A7587BF00C28743 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E7208B1A7587BF00C28743 /* TwoViewController.m */; };
+		B0E7208E1A7587BF00C28743 /* TwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E7208C1A7587BF00C28743 /* TwoViewController.xib */; };
 		B0F0D1CE1A69694800C3FB6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F0D1CD1A69694800C3FB6A /* main.m */; };
 		B0F0D1D11A69694800C3FB6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F0D1D01A69694800C3FB6A /* AppDelegate.m */; };
 		B0F0D1D41A69694800C3FB6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F0D1D31A69694800C3FB6A /* ViewController.m */; };
@@ -56,6 +58,9 @@
 		B074537F1A7527940097091D /* FWKControllerForGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWKControllerForGrid.h; path = Grid/FWKControllerForGrid.h; sourceTree = "<group>"; };
 		B07453801A75671A0097091D /* UIViewController+GridController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GridController.h"; sourceTree = "<group>"; };
 		B07453811A75671A0097091D /* UIViewController+GridController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GridController.m"; sourceTree = "<group>"; };
+		B0E7208A1A7587BF00C28743 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		B0E7208B1A7587BF00C28743 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		B0E7208C1A7587BF00C28743 /* TwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoViewController.xib; sourceTree = "<group>"; };
 		B0F0D1C81A69694800C3FB6A /* ShinyOctoCyril.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinyOctoCyril.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F0D1CC1A69694800C3FB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0F0D1CD1A69694800C3FB6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -131,6 +136,9 @@
 				B074537D1A7524C10097091D /* OneMasterTableViewController.m */,
 				B07453801A75671A0097091D /* UIViewController+GridController.h */,
 				B07453811A75671A0097091D /* UIViewController+GridController.m */,
+				B0E7208A1A7587BF00C28743 /* TwoViewController.h */,
+				B0E7208B1A7587BF00C28743 /* TwoViewController.m */,
+				B0E7208C1A7587BF00C28743 /* TwoViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -282,6 +290,7 @@
 				B0F0D1D71A69694800C3FB6A /* Main.storyboard in Resources */,
 				B0F0D1DC1A69694800C3FB6A /* LaunchScreen.xib in Resources */,
 				B0F0D1D91A69694800C3FB6A /* Images.xcassets in Resources */,
+				B0E7208E1A7587BF00C28743 /* TwoViewController.xib in Resources */,
 				B042FF081A72CD3500312E6F /* FWKGridViewController.xib in Resources */,
 				B074537B1A7524560097091D /* DetailViewController.xib in Resources */,
 			);
@@ -304,6 +313,7 @@
 				B0F0D1D41A69694800C3FB6A /* ViewController.m in Sources */,
 				B042FF101A72D5F500312E6F /* NSLayoutConstraint+VBSelfInstall.m in Sources */,
 				B0F0D1D11A69694800C3FB6A /* AppDelegate.m in Sources */,
+				B0E7208D1A7587BF00C28743 /* TwoViewController.m in Sources */,
 				B042FF0D1A72D5A700312E6F /* UIView+VBHierarchySupport.m in Sources */,
 				B0F0D1CE1A69694800C3FB6A /* main.m in Sources */,
 				B042FF071A72CD3500312E6F /* FWKGridViewController.m in Sources */,

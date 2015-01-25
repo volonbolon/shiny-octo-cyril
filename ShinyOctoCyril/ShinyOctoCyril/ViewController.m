@@ -10,6 +10,7 @@
 #import "FWKGridViewController.h"
 
 #import "OneMasterTableViewController.h"
+#import "TwoViewController.h"
 
 @interface ViewController ()
 - (IBAction)presentGridController:(id)sender;
@@ -33,13 +34,19 @@
     
     OneMasterTableViewController *omtvc = [[OneMasterTableViewController alloc] initWithStyle:UITableViewStylePlain];
     
-    UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:@"One" image:nil selectedImage:nil];
+    UITabBarItem *oneTabBarItem = [[UITabBarItem alloc] initWithTitle:@"One" image:nil selectedImage:nil];
     
-    [omtvc setTabBarItem:tabBarItem];
+    [omtvc setTabBarItem:oneTabBarItem];
+    
+    TwoViewController *tvc = [[TwoViewController alloc] initWithNibName:NSStringFromClass([TwoViewController class]) bundle:nil];
+    
+    UITabBarItem *twoTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Two" image:nil selectedImage:nil];
+    
+    [tvc setTabBarItem:twoTabBarItem];
     
     FWKGridViewController *gvc = [[FWKGridViewController alloc] initWithNibName:NSStringFromClass([FWKGridViewController class]) bundle:nil];
     
-    [gvc setViewControllers:@[omtvc]];
+    [gvc setViewControllers:@[omtvc, tvc]];
     
     [self presentViewController:gvc animated:YES completion:NULL];
     
